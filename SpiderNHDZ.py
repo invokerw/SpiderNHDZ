@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-import urllib
 import urllib2
 import re
 import sys
@@ -27,9 +26,9 @@ try:
         # haveImg = re.search("img",item[3])
         # if not haveImg:
         print '昵称 ' + item[0]
-        str = item[1]
-        str = re.sub(replaceBr, "\n", str)
-        print '内容:\n' + str  # item[1]
+        strs = item[1]
+        strs = re.sub(replaceBr, "\n", strs)
+        print '内容:\n' + strs  # item[1]
         print '神评论 ' + item[2]
 except urllib2.URLError, e:
     if hasattr(e, "code"):
